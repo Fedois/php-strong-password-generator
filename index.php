@@ -1,5 +1,5 @@
 <?php
-	include './funcions.php'
+	include_once './funcions.php'
 ?>
 
 <!DOCTYPE html>
