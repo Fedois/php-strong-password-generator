@@ -3,6 +3,9 @@
         $length = $_GET['length'];
 
         $password = generatePassword($length);
+
+        $_SESSION['psw'] = $password;
+        header("location: password.php");
     }
 
     function generatePassword($length) {

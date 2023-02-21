@@ -1,5 +1,6 @@
 <?php
-	include_once './funcions.php'
+    session_start();
+	include_once __DIR__ .'/./funcions.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,5 @@
 		<input type="number" id="length" name="length" min="1" max="10" required>
 		<button type="submit">Genera</button>
 	</form>
-
-    <h2>la tua password casuale è: <?php echo $password ?></h2>
 </body>
 </html>
