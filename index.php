@@ -16,6 +16,10 @@
 	<form method="GET">
 		<label for="length">Lunghezza password:</label>
 		<input type="number" id="length" name="length" min="1" max="10" required>
+        <input name="words" type="checkbox"> solo lettere
+        <input name="numbers" type="checkbox"> solo numeri
+        <input name="special" type="checkbox"> solo caratteri speciali
+        <br>
 		<button type="submit">Genera</button>
 	</form>
 </body>

@@ -9,12 +9,41 @@
     }
 
     function generatePassword($length) {
-        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+';
-        $password = '';
-        
-        for($i=0; $i<$length; $i++) {
-            $password .= $chars[rand(0, strlen($chars)-1)];
+        if(isset($_GET['words'])){
+            $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $password = '';
+            
+            for($i=0; $i<$length; $i++) {
+                $password .= $chars[rand(0, strlen($chars)-1)];
+            }
+            return $password;
         }
-        return $password;
+        else if(isset($_GET['numbers'])){
+            $chars = '1234567890';
+            $password = '';
+            
+            for($i=0; $i<$length; $i++) {
+                $password .= $chars[rand(0, strlen($chars)-1)];
+            }
+            return $password;
+        }
+        else if(isset($_GET['special'])){
+            $chars = '!@#$%^&*()_+';
+            $password = '';
+            
+            for($i=0; $i<$length; $i++) {
+                $password .= $chars[rand(0, strlen($chars)-1)];
+            }
+            return $password;
+        }
+        else{
+            $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+';
+            $password = '';
+            
+            for($i=0; $i<$length; $i++) {
+                $password .= $chars[rand(0, strlen($chars)-1)];
+            }
+            return $password;
+        }
     }
 ?>
